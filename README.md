@@ -5,9 +5,9 @@
 
 - 🔭 Hoje trabalho na empresa **3CON**
 
-- 🌱 Hoje estou estudando **Rust, Docker, Linux e Kotlin**
+- 🌱 Hoje estou estudando **Docker, Linux e Kotlin**
 
-- 🤝 Me chame se precisar de ajuda com **TypeScript, Shellscript, ReactJS, NodeJS...**
+- 🤝 Me chame se precisar de ajuda com **TypeScript, Shellscript, ReactJS, NodeJS e Rust**
 
 <p align="left">
 <a href="https://linkedin.com/in/jeffersoncbd" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="jeffersoncbd" height="30" width="40" /></a>
