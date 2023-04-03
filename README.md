@@ -1,4 +1,4 @@
-<h1 align="center">Olá ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif), Me chamo Jefferson</h1>
+<h1 align="center">Olá👋, Me chamo Jefferson</h1>
 <h3 align="center">Apaixonado por automações e desenvolvimento no geral seja back, front, mobile e até low level.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=jeffersoncbd&label=Visualiza%C3%A7%C3%B5es&color=0e75b6&style=flat" alt="jeffersoncbd" /> </p>
