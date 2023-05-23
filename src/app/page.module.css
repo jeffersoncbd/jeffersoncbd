@@ -47,8 +47,8 @@
 }
 @keyframes circle1frames {
   0%   {margin-top: 0px; margin-left: 0px;}
-  25%  {margin-top: 50px; margin-left: 30px;}
-  50%  {margin-top: 30px; margin-left: 10px;}
+  20%  {margin-top: 50px; margin-left: 30px;}
+  60%  {margin-top: 30px; margin-left: 10px;}
   100% {margin-top: -10px; margin-left: 40px;}
 }
 .square {
@@ -58,14 +58,14 @@
   margin-top: -30px;
   margin-left: 60px;
   animation-name: squareFrames;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 @keyframes squareFrames {
   0%   {margin-top: -30px; margin-left: 60px;}
-  25%  {margin-top: -120px; margin-left: 80px;}
-  50%  {margin-top: -100px; margin-left: 70px;}
+  30%  {margin-top: -120px; margin-left: 80px;}
+  70%  {margin-top: -100px; margin-left: 70px;}
   100% {margin-top: -60px; margin-left: 90px;}
 }
 .circle2 {
@@ -76,14 +76,14 @@
   margin-top: -120px;
   margin-left: 150px;
   animation-name: circle2frames;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 @keyframes circle2frames {
   0%   {margin-top: -10px; margin-left: 150px;}
-  25%  {margin-top: -80px; margin-left: 130px;}
-  50%  {margin-top: -90px; margin-left: 170px;}
+  40%  {margin-top: -80px; margin-left: 130px;}
+  60%  {margin-top: -90px; margin-left: 170px;}
   100% {margin-top: -160px; margin-left: 140px;}
 }
 
