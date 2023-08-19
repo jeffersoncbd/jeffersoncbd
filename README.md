@@ -5,12 +5,7 @@
 
 * 🌍  Morando no Brasil
 * 🔭  Trabalhando na **[3CON - TI & Digital](https://www.trescon.com.br/)**
-* 🧠 Hoje estou estudando:
-  * Python + Rasa
-  * Docker
-  * Linux
-  * Kotlin
-* 🤝 Me chame se precisar de ajuda com **TypeScript, Shellscript, ReactJS, NodeJS e Rust**
+* 🤝 Me chame se precisar de ajuda com **Rust, TypeScript, Shellscript, ReactJS e NodeJS**
 * ✉️ Meu email: [jeff.carlosbd@gmail.com](mailto:jeff.carlosbd@gmail.com)
 
 <h3 align="center">Linguagens e ferramentas</h3>
