@@ -16,7 +16,10 @@ const CarouselItem: React.FC<Properties> = (properties) => {
     }
 
     return (
-        <div id={properties.itemKey} className={`carousel-item ${id === '' && 'hidden'}`}>
+        <div
+            id={properties.itemKey}
+            className={`carousel-item border p-8 border-emerald-800 border-solid rounded-lg ${id === '' && 'hidden'}`}
+        >
             {properties.children}
         </div>
     )

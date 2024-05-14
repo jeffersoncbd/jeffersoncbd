@@ -38,6 +38,13 @@ const Home: React.FC = () => {
           </Skill.Stack>
         </Carousel.Item>
 
+        <Carousel.Item itemKey="backend-go">
+          <Skill.Stack>
+            <Skill.Item title="GO" iconUrl="/go.svg" progress={50} />
+            <Skill.Item title="Gin" iconUrl="/gin.svg" progress={40} />
+          </Skill.Stack>
+        </Carousel.Item>
+
       </Carousel.Panel>
     </main>
   );

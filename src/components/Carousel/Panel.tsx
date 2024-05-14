@@ -41,7 +41,7 @@ const CarouselPanel: React.FC<Properties> = ({ id, children }) => {
 
     return (
         <CarouselContext.Provider value={showItem}>
-            <div id={id} className="border p-8 border-emerald-800 border-solid rounded-lg">
+            <div id={id}>
                 {children}
             </div>
         </CarouselContext.Provider>
