@@ -9,8 +9,12 @@ const Home: React.FC = () => {
       <Typewriter className="font-bold text-3xl" speed={100}>
         Jefferson Carlos
       </Typewriter>
-      <Typewriter className="inline text-gray-400" speed={50} delay={2200} isLastCursor>
+      <Typewriter className="inline text-gray-400" speed={40} delay={2200}>
         Desenvolvedor de software
+      </Typewriter>
+      {' '}
+      <Typewriter className="inline text-yellow-400" speed={40} delay={3500} isLastCursor>
+        fullstack
       </Typewriter>
     </main>
   );
