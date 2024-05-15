@@ -7,7 +7,7 @@ import React from "react";
 
 const Home: React.FC = () => {
   return (
-    <main className="w-full text-white">
+    <main className="text-white max-w-4xl mx-auto">
       <div className="h-24">
         <Typewriter className="font-bold text-3xl" speed={100}>
           Jefferson Carlos

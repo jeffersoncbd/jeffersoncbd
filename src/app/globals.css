@@ -7,12 +7,3 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
-html {
-  background-color: #000;
-}
-
-html,
-body {
-  padding: 8px;
-}
