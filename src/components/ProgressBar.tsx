@@ -20,7 +20,7 @@ const ProgressBar: React.FC<Properties> = ({ value }) => {
     }, [progress, value])
 
     return (
-        <div className="progress-bar flex gap-1">
+        <div className="progress-bar flex gap-1 w-full">
             {Array(10).fill("").map(
                 (_, i) => {
                     let color = ''

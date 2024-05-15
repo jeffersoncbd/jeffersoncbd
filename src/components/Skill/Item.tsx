@@ -12,15 +12,12 @@ interface Properties {
 
 const SkillItem: React.FC<Properties> = ({ title, iconUrl, progress }) => {
     return (
-        <div>
-            <div className="flex items-center mb-2">
-                <div className="grow">
-                    <Image src={iconUrl} alt="axum-icon" width={40} height={40} />
-                </div>
-                <h2 className="title text-xl grow font-bold">{title}</h2>
-                <div className="grow" />
+        <div className='flex gap-2'>
+            <Image src={iconUrl} alt="axum-icon" width={50} height={50} />
+            <div className="grow flex gap-2 flex-col mb-2">
+                <h2 className="title text-xl font-bold">{title}</h2>
+                <ProgressBar value={progress} />
             </div>
-            <ProgressBar value={progress} />
         </div>
     )
 }
