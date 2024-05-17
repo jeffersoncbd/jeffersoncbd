@@ -7,3 +7,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}

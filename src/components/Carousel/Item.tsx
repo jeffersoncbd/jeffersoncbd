@@ -1,7 +1,6 @@
 "use client"
 
-import useWindowSize from '@/hooks/windowSize'
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { CarouselContext } from './Panel'
 
 interface Properties {
@@ -10,25 +9,49 @@ interface Properties {
 }
 
 const CarouselItem: React.FC<Properties> = (properties) => {
-    const windowSize = useWindowSize()
+    const { ids, show, itemsLength } = useContext(CarouselContext)
 
-    const { ids, index, itemsLength } = useContext(CarouselContext)
+    const [mounted, setMounted] = useState(false)
+    const [mounting, setMounting] = useState(false)
+    const [dismounting, setDismounting] = useState(false)
 
-    const thisIsLast = useMemo(() => {
-        return index[1] === 0 && index[0] === itemsLength - 1 && properties.itemKey === ids[1]
-    }, [ids, index, itemsLength, properties.itemKey])
+    useEffect(() => {
+        if (!mounted && show === properties.itemKey) {
+            setMounting(true)
+            setTimeout(() => {
+                setMounted(true)
+                setMounting(false)
+            }, 1000)
+        } else if (mounted && show !== properties.itemKey) {
+            setDismounting(true)
+            setTimeout(() => {
+                setMounted(false)
+                setDismounting(false)
+            }, 1000)
+        }
+    }, [mounted, properties.itemKey, show])
 
-    if (!ids.includes(properties.itemKey) && index.length > 0) {
-        return ''
-    }
+    const position = useMemo(() => {
+        if (mounting) {
+            return 'left-full'
+        } else if (dismounting || !mounted) {
+            return '-left-full'
+        } else {
+            return 'left-0'
+        }
+    }, [dismounting, mounted, mounting])
 
     return (
         <div
             id={properties.itemKey}
             key={properties.itemKey}
-            className={`carousel-item border p-8 border-emerald-800 border-solid rounded-lg ${windowSize[0] <= 700 ? 'w-full' : 'w-1/2'} ${index.length === 0 && 'hidden'} ${thisIsLast && 'order-last'}`}
+            className={`carousel-item ${position} ${dismounting && 'opacity-0'} ${!mounted && 'opacity-0'} relative w-full transition-all duration-1000`}
         >
-            {properties.children}
+            {!mounted ? '' : (
+                <div className={`absolute left-0 right-0 p-8 border border-emerald-800 border-solid rounded-lg`}>
+                    {properties.children}
+                </div>
+            )}
         </div>
     )
 }

@@ -10,7 +10,7 @@ interface Properties {
 
 export const CarouselContext = createContext({
     ids: [''],
-    index: [0, 0],
+    show: '',
     itemsLength: 0
 })
 
@@ -18,42 +18,35 @@ const CarouselPanel: React.FC<Properties> = ({ id, children }) => {
     const windowSize = useWindowSize()
 
     const [ids, setIds] = useState<string[]>([])
-    const [index, setIndex] = useState<number[]>([])
+    const [show, setShow] = useState('')
     const [itemsLength, setItemsLength] = useState(0)
 
     useEffect(() => {
-        let titles: string[] = []
+        let ids: string[] = []
         document.querySelectorAll(`#${id} > div.carousel-item`).forEach((item) => {
-            titles.push(item.id)
+            ids.push(item.id)
         })
 
-        setItemsLength(titles.length)
+        setIds(ids)
+        setItemsLength(ids.length)
 
         let timeoutId: NodeJS.Timeout | null = null
-        function updateItem(index: [number, number]) {
-            setIndex([...index])
-            setIds([titles[index[0]], titles[index[1]]])
-            let newIndex = index
-            if (titles.length > 2) {
-                if (index[0] === titles.length - 1) {
-                    newIndex[0] = 0
+        function updateItem(id: string) {
+            setShow(id)
+            let newId = id
+            if (ids.length > 2) {
+                const index = ids.findIndex((item) => item === id)
+                if (index === ids.length - 1) {
+                    newId = ids[0]
                 } else {
-                    newIndex[0]++
-                }
-                if (index[1] === titles.length - 1) {
-                    newIndex[1] = 0
-                } else {
-                    newIndex[1]++
+                    newId = ids[index + 1]
                 }
             }
-            timeoutId = setTimeout(() => updateItem(newIndex), 5000)
+            timeoutId = setTimeout(() => updateItem(newId), 5000)
         }
 
-        if (titles.length === 1 || windowSize[0] <= 700) {
-            timeoutId = setTimeout(() => updateItem([0, 0]), 100)
-        } else if (titles.length >= 2) {
-            timeoutId = setTimeout(() => updateItem([0, 1]), 100)
-        }
+        timeoutId = setTimeout(() => updateItem(ids[0]), 200)
+
         return () => {
             if (timeoutId !== null) {
                 clearInterval(timeoutId)
@@ -63,8 +56,8 @@ const CarouselPanel: React.FC<Properties> = ({ id, children }) => {
     }, [children, id, windowSize])
 
     return (
-        <CarouselContext.Provider value={{ ids, index, itemsLength }}>
-            <div id={id} className="flex gap-4 w-full">
+        <CarouselContext.Provider value={{ ids, show, itemsLength }}>
+            <div id={id} className="w-full">
                 {children}
             </div>
         </CarouselContext.Provider>
