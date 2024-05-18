@@ -5,7 +5,7 @@ import React from 'react';
 
 const FrontendSkills: React.FC = () => {
     return (
-        <div className='h-40'>
+        <div className='h-64 sm:h-40'>
             <h2>Ferramentas de frontend</h2>
             <Carousel.Panel id="frontend-tools">
 
