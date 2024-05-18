@@ -5,7 +5,7 @@ interface Properties {
 }
 
 const SkillStack: React.FC<Properties> = (properties) => (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col sm:flex-row gap-8">
         {properties.children}
     </div>
 )

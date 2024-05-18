@@ -26,7 +26,7 @@ const ProgressBar: React.FC<Properties> = ({ value }) => {
                     let color = ''
                     if ((i + 1) * 10 > progress) {
                         color = 'bg-gray-800'
-                    } else if (i === 8) {
+                    } else if (i >= 8) {
                         color = 'bg-blue-600'
                     } else if (i >= 2) {
                         color = 'bg-green-600'
