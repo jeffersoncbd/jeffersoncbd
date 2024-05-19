@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           <TestsSkills />
         </div>
         <Link href="/skills">
-          <Typewriter.Text className="text-yellow-400 text-center" order={9} speed={20}>
+          <Typewriter.Text className="text-yellow-400 text-center" order={10} speed={20}>
             lista completa
           </Typewriter.Text>
         </Link>

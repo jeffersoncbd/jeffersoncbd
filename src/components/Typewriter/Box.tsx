@@ -6,9 +6,10 @@ import { TypewriterCursor } from "./Cursor"
 interface Properties {
     children: React.ReactNode
     order: number
+    parallel?: boolean
 }
 
-const TypewriterBox: React.FC<Properties> = ({ order, children }) => {
+const TypewriterBox: React.FC<Properties> = ({ order, children, parallel }) => {
     const { typingIndex, registerIndex, nextIndex } = useContext(TypewriterCursor.Context)
 
     const [show, setShow] = useState(false)
@@ -24,10 +25,10 @@ const TypewriterBox: React.FC<Properties> = ({ order, children }) => {
     }, [order, show, typingIndex])
 
     useEffect(() => {
-        if (order === typingIndex && show) {
+        if (order === typingIndex && show && parallel !== true) {
             setTimeout(() => nextIndex(), 2000)
         }
-    }, [nextIndex, order, show, typingIndex])
+    }, [nextIndex, order, show, typingIndex, parallel])
 
     if (!show) {
         return null

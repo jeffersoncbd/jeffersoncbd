@@ -9,7 +9,7 @@ const DatabaseSkills: React.FC = () => {
         <div className='h-40 flex-1'>
             <Typewriter.Text order={7} speed={10}>Bancos de dados</Typewriter.Text>
 
-            <Typewriter.Box order={9}>
+            <Typewriter.Box order={9} parallel>
                 <Carousel.Panel id="database-tools">
 
                     <Carousel.Item itemKey="database-postgres">
