@@ -2,6 +2,7 @@
 
 import React from "react";
 import BackendSkills from "./components/BackendSkills";
+import DatabaseSkills from "./components/DatabaseSkills";
 import FrontendSkills from "./components/FrontendSkills";
 import Header from "./components/Header";
 
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <Header />
       <BackendSkills />
       <FrontendSkills />
+      <DatabaseSkills />
     </main>
   );
 }
