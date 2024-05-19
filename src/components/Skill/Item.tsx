@@ -13,7 +13,7 @@ interface Properties {
 const SkillItem: React.FC<Properties> = ({ title, iconUrl, progress }) => {
     return (
         <div className='flex-1 flex gap-2'>
-            <Image src={iconUrl} alt="axum-icon" width={50} height={50} />
+            <Image src={iconUrl} alt="axum-icon" width={0} height={0} className='w-14 h-auto' />
             <div className="flex-1 flex gap-2 flex-col mb-2">
                 <h2 className="title text-xl font-bold">{title}</h2>
                 <ProgressBar value={progress} />

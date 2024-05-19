@@ -1,7 +1,8 @@
-import TypewriterProvider from './Provider';
-import TypewriterSymbol from "./Symbol";
+import TypewriterCursorProvider, { TypewriterCursorContext } from './Provider';
+import TypewriterCursorSymbol from "./Symbol";
 
 export const TypewriterCursor = {
-    Symbol: TypewriterSymbol,
-    Provider: TypewriterProvider
+    Symbol: TypewriterCursorSymbol,
+    Context: TypewriterCursorContext,
+    Provider: TypewriterCursorProvider
 }

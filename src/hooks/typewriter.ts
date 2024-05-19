@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { TypewriterCursor } from "@/components/Typewriter/Cursor";
+import { useContext, useEffect, useState } from "react";
 
-export function useTypewriter(
-  fullText: string,
-  speed: number,
-  delay?: number
-): [string, boolean] {
+interface Return {
+  text: string;
+  start: () => void;
+}
+
+export function useTypewriter(fullText: string, speed: number): Return {
+  const { nextIndex } = useContext(TypewriterCursor.Context);
+
   const [text, setText] = useState("");
-  const [awaiting, setAwaiting] = useState(true);
+  const [typing, setTyping] = useState(false);
 
   useEffect(() => {
     let id: NodeJS.Timeout | undefined;
@@ -18,15 +22,15 @@ export function useTypewriter(
       }
     };
 
-    id = setTimeout(
-      () => {
-        type(0);
-        setAwaiting(false);
-      },
-      delay === undefined ? 100 : delay
-    );
+    if (typing) {
+      type(0);
+    }
     return () => clearTimeout(id);
-  }, [fullText, speed, delay]);
+  }, [fullText, speed, typing]);
 
-  return [text, awaiting];
+  const start = () => {
+    setTyping(true);
+  };
+
+  return { text, start };
 }

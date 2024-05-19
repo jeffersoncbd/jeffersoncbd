@@ -1,21 +1,19 @@
-import Typewriter from '@/components/Typewriter';
+import { Typewriter } from '@/components/Typewriter';
 import React from 'react';
 
-interface Properties { }
-
-const Header: React.FC<Properties> = (properties) => {
+const Header: React.FC = () => {
     return (
         <div className="h-16">
-            <Typewriter className="font-bold text-3xl" speed={100}>
+            <Typewriter.Text order={0} className="font-bold text-3xl" speed={50}>
                 Jefferson Carlos
-            </Typewriter>
-            <Typewriter className="inline text-gray-400" speed={40} delay={2200}>
+            </Typewriter.Text>
+            <Typewriter.Text order={1} className="inline text-gray-400" speed={20}>
                 Desenvolvedor de software
-            </Typewriter>
+            </Typewriter.Text>
             {' '}
-            <Typewriter className="inline text-yellow-400" speed={40} delay={3500} isLastCursor>
+            <Typewriter.Text order={2} className="inline text-yellow-400" speed={20}>
                 fullstack
-            </Typewriter>
+            </Typewriter.Text>
         </div>
     );
 }

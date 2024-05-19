@@ -42,7 +42,7 @@ const CarouselPanel: React.FC<Properties> = ({ id, children }) => {
                     newId = ids[index + 1]
                 }
             }
-            timeoutId = setTimeout(() => updateItem(newId), 5000)
+            timeoutId = setTimeout(() => updateItem(newId), 8000)
         }
 
         timeoutId = setTimeout(() => updateItem(ids[0]), 200)

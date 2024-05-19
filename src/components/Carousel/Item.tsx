@@ -9,7 +9,7 @@ interface Properties {
 }
 
 const CarouselItem: React.FC<Properties> = (properties) => {
-    const { ids, show, itemsLength } = useContext(CarouselContext)
+    const { show } = useContext(CarouselContext)
 
     const [mounted, setMounted] = useState(false)
     const [mounting, setMounting] = useState(false)
@@ -21,13 +21,13 @@ const CarouselItem: React.FC<Properties> = (properties) => {
             setTimeout(() => {
                 setMounted(true)
                 setMounting(false)
-            }, 1000)
+            }, 500)
         } else if (mounted && show !== properties.itemKey) {
             setDismounting(true)
             setTimeout(() => {
                 setMounted(false)
                 setDismounting(false)
-            }, 1000)
+            }, 500)
         }
     }, [mounted, properties.itemKey, show])
 
@@ -45,7 +45,7 @@ const CarouselItem: React.FC<Properties> = (properties) => {
         <div
             id={properties.itemKey}
             key={properties.itemKey}
-            className={`carousel-item ${position} ${dismounting && 'opacity-0'} ${!mounted && 'opacity-0'} relative w-full transition-all duration-1000`}
+            className={`carousel-item ${position} ${dismounting && 'opacity-0'} ${!mounted && 'opacity-0'} relative w-full transition-all duration-500`}
         >
             {!mounted ? '' : (
                 <div className={`absolute left-0 right-0 p-8 border border-emerald-800 border-solid rounded-lg`}>
