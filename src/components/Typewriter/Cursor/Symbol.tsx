@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-const TypewriterCursor: React.FC = () => {
+const TypewriterSymbol: React.FC = () => {
     return <span className="text-emerald-500 animate-terminal-cursor font-bold">_</span>
 }
 
-export default TypewriterCursor
+export default TypewriterSymbol

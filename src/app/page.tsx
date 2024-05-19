@@ -5,6 +5,7 @@ import BackendSkills from "./components/BackendSkills";
 import DatabaseSkills from "./components/DatabaseSkills";
 import FrontendSkills from "./components/FrontendSkills";
 import Header from "./components/Header";
+import TestsSkills from "./components/TestsSkills";
 
 const Home: React.FC = () => {
   return (
@@ -12,7 +13,10 @@ const Home: React.FC = () => {
       <Header />
       <BackendSkills />
       <FrontendSkills />
-      <DatabaseSkills />
+      <div className="flex h-80 flex-col sm:flex-row gap-4">
+        <DatabaseSkills />
+        <TestsSkills />
+      </div>
     </main>
   );
 }

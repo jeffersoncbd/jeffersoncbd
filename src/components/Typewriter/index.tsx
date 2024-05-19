@@ -2,7 +2,7 @@
 
 import { useTypewriter } from '@/hooks/typewriter';
 import React, { DetailedHTMLProps, HTMLAttributes, useMemo } from 'react';
-import TypewriterCursor from './Cursor';
+import { TypewriterCursor } from './Cursor';
 
 interface Properties extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     children: string
@@ -18,7 +18,7 @@ const Typewriter: React.FC<Properties> = ({ speed, delay, isLastCursor, ...prope
 
     return (
         <div {...properties}>
-            {text}{!awaiting && !complete && <TypewriterCursor />}{complete && isLastCursor === true && <TypewriterCursor />}
+            {text}{!awaiting && !complete && <TypewriterCursor.Symbol />}{complete && isLastCursor === true && <TypewriterCursor.Symbol />}
         </div>
     )
 }
