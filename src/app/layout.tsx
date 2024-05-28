@@ -24,9 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" style={{ backgroundColor: '#000' }}>
       <body className={inter.className}>
-        <div className="p-8">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

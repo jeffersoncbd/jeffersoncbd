@@ -15,6 +15,10 @@ const config: Config = {
       },
       animation: {
         "terminal-cursor": "terminal-cursor 1s infinite",
+        "circular-first": "circular-first 30s infinite linear",
+        "circular-second": "circular-second 100s infinite linear",
+        "circular-third": "circular-third 200s infinite linear",
+        "circular-fourth": "circular-fourth 300s infinite linear",
       },
       keyframes: {
         "terminal-cursor": {
@@ -22,6 +26,38 @@ const config: Config = {
           "49.9%": { opacity: "1" },
           "50%": { opacity: "0" },
           "100%": { opacity: "0" },
+        },
+        "circular-first": {
+          "0%": {
+            transform: "rotate(-45deg) translateY(1210%)",
+          },
+          "100%": {
+            transform: "rotate(315deg) translateY(1210%)",
+          },
+        },
+        "circular-second": {
+          "0%": {
+            transform: "rotate(-30deg) translateX(1345%)",
+          },
+          "100%": {
+            transform: "rotate(330deg) translateX(1345%)",
+          },
+        },
+        "circular-third": {
+          "0%": {
+            transform: "rotate(-100deg) translateY(-975%)",
+          },
+          "100%": {
+            transform: "rotate(260deg) translateY(-975%)",
+          },
+        },
+        "circular-fourth": {
+          "0%": {
+            transform: "rotate(-135deg) translateX(-2600%)",
+          },
+          "100%": {
+            transform: "rotate(225deg) translateX(-2600%)",
+          },
         },
       },
     },
