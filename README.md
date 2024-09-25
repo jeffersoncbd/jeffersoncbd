@@ -8,6 +8,8 @@
 * 🤝 Me chame se precisar de ajuda com **Rust, TypeScript, Shellscript, ReactJS e NodeJS**
 * ✉️ Meu email: [jeff.carlosbd@gmail.com](mailto:jeff.carlosbd@gmail.com)
 
+![Jefferson's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffersoncbd&show_icons=true&theme=tokyonight)
+
 <h3 align="center">Linguagens e ferramentas</h3>
 <p align="center">
 <a href="https://www.rust-lang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/rust-colored.svg" width="36" height="36" alt="Rust" /></a>
