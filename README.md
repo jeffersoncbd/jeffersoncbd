@@ -8,8 +8,6 @@
 * 🤝 Me chame se precisar de ajuda com **Rust, TypeScript, Shellscript, ReactJS e NodeJS**
 * ✉️ Meu email: [jeff.carlosbd@gmail.com](mailto:jeff.carlosbd@gmail.com)
 
-![Jefferson's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffersoncbd&show_icons=true&theme=tokyonight)
-
 <h3 align="center">Linguagens e ferramentas</h3>
 <p align="center">
 <a href="https://www.rust-lang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/rust-colored.svg" width="36" height="36" alt="Rust" /></a>
@@ -28,5 +26,3 @@
 <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" width="36" height="36" alt="PostgreSQL" /></a>
 <a href="https://laravel.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg" width="36" height="36" alt="Laravel" /></a>
 </p>
-
-<p align="center"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jeffersoncbd&show_icons=true&theme=dracula&locale=en&layout=compact&custom_title=Linguagens%20mais%20utilizadas&langs_count=10" alt="jeffersoncbd" /></p>
